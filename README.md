@@ -9,11 +9,6 @@ Sistema de controle de sala desenvolvido com Python e FastAPI.
 
 ## Instalação e Execução
 
-1. Clone o repositório:
-```bash
-git clone [URL_DO_REPOSITÓRIO]
-cd controle_sala
-```
 
 2. Execute o projeto usando Docker Compose:
 ```bash
