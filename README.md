@@ -55,6 +55,7 @@ Após a execução, os serviços estarão disponíveis em:
 - ms-usuario: http://localhost:8080
 - ms-sala: http://localhost:8081
 - ms-reserva: http://localhost:8082
+- Adminer (Gerenciamento de Banco de Dados): http://localhost:4040
 
 ## Documentação das APIs
 
