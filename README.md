@@ -52,17 +52,17 @@ docker-compose up --build
 Após a execução, os serviços estarão disponíveis em:
 
 - Frontend: http://localhost:3000
-- ms-usuario: http://localhost:8081
-- ms-sala: http://localhost:8082
-- ms-reserva: http://localhost:8083
+- ms-usuario: http://localhost:8080
+- ms-sala: http://localhost:8081
+- ms-reserva: http://localhost:8082
 
 ## Documentação das APIs
 
 Após iniciar os serviços, a documentação Swagger estará disponível em:
 
-- ms-usuario: http://localhost:8081/swagger-ui.html
-- ms-sala: http://localhost:8082/swagger-ui.html
-- ms-reserva: http://localhost:8083/swagger-ui.html
+- ms-usuario: http://localhost:8080/swagger-ui.html
+- ms-sala: http://localhost:8081/swagger-ui.html
+- ms-reserva: http://localhost:8082/swagger-ui.html
 
 ## Desenvolvimento
 
