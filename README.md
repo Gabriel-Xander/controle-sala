@@ -34,7 +34,6 @@ O sistema é composto por três microsserviços principais:
 - Docker Compose
 - Java 17 (para desenvolvimento)
 - Maven (para desenvolvimento)
-- Node.js (para desenvolvimento do frontend)
 
 ## Executando o Projeto
 
