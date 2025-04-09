@@ -57,14 +57,6 @@ Após a execução, os serviços estarão disponíveis em:
 - ms-reserva: http://localhost:8082
 - Adminer (Gerenciamento de Banco de Dados): http://localhost:4040
 
-## Documentação das APIs
-
-Após iniciar os serviços, a documentação Swagger estará disponível em:
-
-- ms-usuario: http://localhost:8080/swagger-ui.html
-- ms-sala: http://localhost:8081/swagger-ui.html
-- ms-reserva: http://localhost:8082/swagger-ui.html
-
 ## Desenvolvimento
 
 Para desenvolvimento local de cada microsserviço:
