@@ -7,17 +7,34 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 @Service
 public class ReservaService {
     private final ReservaRepository reservaRepository;
+    private final UsuarioService usuarioService;
 
-    public ReservaService(ReservaRepository reservaRepository) {
+    public ReservaService(ReservaRepository reservaRepository, UsuarioService usuarioService) {
         this.reservaRepository = reservaRepository;
+        this.usuarioService = usuarioService;
     }
 
     public Reserva salvar(Reserva reserva) {
         validarReserva(reserva);
+
+        try {
+            boolean usuarioValido = usuarioService
+                    .validarUsuario(reserva.getUsuarioId().getUsuarioId())
+                    .get(5, TimeUnit.SECONDS);
+
+            if (!usuarioValido) {
+                throw new IllegalArgumentException("Usuario não encontrado");
+            }
+        } catch (InterruptedException | ExecutionException | TimeoutException e) {
+            throw new RuntimeException("Erro ao validar Usuário");
+        }
         return reservaRepository.save(reserva);
     }
 

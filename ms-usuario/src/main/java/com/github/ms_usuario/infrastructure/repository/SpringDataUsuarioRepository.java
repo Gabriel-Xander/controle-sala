@@ -7,4 +7,6 @@ import java.util.Optional;
 
 public interface SpringDataUsuarioRepository extends JpaRepository<Usuario, Long> {
     Optional<Usuario> findByCpf(Cpf cpf);
+
+    boolean existsUsuarioById(Long id);
 }

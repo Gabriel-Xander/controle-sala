@@ -45,10 +45,13 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PersonIcon from "@mui/icons-material/Person";
 import RefreshIcon from "@mui/icons-material/Refresh";
 
+// Define a base URL para as APIs
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost";
+
 const API_BASE_URL = {
-  usuarios: "http://localhost:8080/usuarios",
-  salas: "http://localhost:8081/salas",
-  reservas: "http://localhost:8082/reservas",
+  usuarios: `${API_URL}/api/usuarios`,
+  salas: `${API_URL}/api/salas`,
+  reservas: `${API_URL}/api/reservas`,
 };
 
 export default function App() {

@@ -19,9 +19,17 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
-    public Optional<Usuario> buscarPorCpf (String cpf) {
+    public Optional<Usuario> buscarPorCpf(String cpf) {
         return usuarioRepository.findByCpf(cpf);
     }
 
-    public List<Usuario> buscarTodos(){return usuarioRepository.findAll();}
+    public List<Usuario> buscarTodos() {
+        return usuarioRepository.findAll();
+    }
+
+    public boolean buscarPorId(Long userId) {
+        return usuarioRepository.buscarPorId(userId);
+    }
+
+    ;
 }

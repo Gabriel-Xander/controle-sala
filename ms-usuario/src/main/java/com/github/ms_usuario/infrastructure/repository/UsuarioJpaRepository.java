@@ -22,6 +22,10 @@ public class UsuarioJpaRepository implements UsuarioRepository {
         Cpf cpfValue = new Cpf(cpf);
         return repository.findByCpf(cpfValue);
     }
+    @Override
+    public boolean buscarPorId(Long userId){
+        return repository.existsUsuarioById(userId);
+    }
 
     @Override
     public Usuario save(Usuario usuario) {
@@ -32,4 +36,6 @@ public class UsuarioJpaRepository implements UsuarioRepository {
     public List<Usuario> findAll(){
         return repository.findAll();
     }
+
+
 }
